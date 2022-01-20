@@ -1,0 +1,15 @@
+{
+  "name": "granular-scrubber-3d",
+  "version": "1.0.0",
+  "description": "",
+  "main": "samples-finder.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "fast-glob": "^3.2.11"
+  }
+}
