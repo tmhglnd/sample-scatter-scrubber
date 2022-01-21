@@ -10,7 +10,7 @@
 		}
 ,
 		"classnamespace" : "box",
-		"rect" : [ 34.0, 78.0, 1124.0, 788.0 ],
+		"rect" : [ 34.0, 78.0, 995.0, 788.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -39,6 +39,66 @@
 		"subpatcher_template" : "",
 		"assistshowspatchername" : 0,
 		"boxes" : [ 			{
+				"box" : 				{
+					"id" : "obj-13",
+					"maxclass" : "newobj",
+					"numinlets" : 2,
+					"numoutlets" : 1,
+					"outlettype" : [ "int" ],
+					"patching_rect" : [ 114.0, 585.0, 29.5, 22.0 ],
+					"text" : "+ 1"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-11",
+					"maxclass" : "number",
+					"numinlets" : 1,
+					"numoutlets" : 2,
+					"outlettype" : [ "", "bang" ],
+					"parameter_enable" : 0,
+					"patching_rect" : [ 229.5, 772.0, 81.0, 22.0 ]
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-9",
+					"maxclass" : "newobj",
+					"numinlets" : 1,
+					"numoutlets" : 2,
+					"outlettype" : [ "float", "bang" ],
+					"patching_rect" : [ 260.5, 690.0, 125.0, 22.0 ],
+					"text" : "buffer~ concatSounds"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-6",
+					"maxclass" : "newobj",
+					"numinlets" : 1,
+					"numoutlets" : 3,
+					"outlettype" : [ "", "", "" ],
+					"patching_rect" : [ 229.5, 659.0, 81.0, 22.0 ],
+					"text" : "getattr samps"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-1",
+					"maxclass" : "newobj",
+					"numinlets" : 1,
+					"numoutlets" : 3,
+					"outlettype" : [ "bang", "float", "" ],
+					"patching_rect" : [ 114.0, 722.0, 218.0, 22.0 ],
+					"text" : "fluid.bufcompose~ @source slicePoints"
+				}
+
+			}
+, 			{
 				"box" : 				{
 					"fontface" : 1,
 					"id" : "obj-8",
@@ -1921,13 +1981,12 @@
 , 							{
 								"box" : 								{
 									"id" : "obj-107",
-									"linecount" : 4,
 									"maxclass" : "message",
 									"numinlets" : 2,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
 									"patching_rect" : [ 305.0, 145.0, 136.0, 22.0 ],
-									"text" : "\"48\" \"64\" \"71\" \"12\" \"31\" \"32\" \"60\" \"61\" \"59\" \"43\" \"17\" \"54\" \"18\" \"66\" \"0\" \"65\" \"68\" \"26\" \"45\" \"53\""
+									"text" : "\"44\" \"46\" \"45\" \"42\" \"58\""
 								}
 
 							}
@@ -2033,7 +2092,7 @@
 									"numinlets" : 0,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 263.0, 100.0, 105.0, 22.0 ],
+									"patching_rect" : [ 263.0, 90.0, 105.0, 22.0 ],
 									"text" : "r nearestPositions"
 								}
 
@@ -2708,7 +2767,7 @@
 						}
 ,
 						"classnamespace" : "box",
-						"rect" : [ 59.0, 103.0, 640.0, 480.0 ],
+						"rect" : [ 59.0, 103.0, 644.0, 519.0 ],
 						"bglocked" : 0,
 						"openinpresentation" : 0,
 						"default_fontsize" : 12.0,
@@ -2738,13 +2797,49 @@
 						"assistshowspatchername" : 0,
 						"boxes" : [ 							{
 								"box" : 								{
+									"id" : "obj-6",
+									"linecount" : 3,
+									"maxclass" : "comment",
+									"numinlets" : 1,
+									"numoutlets" : 0,
+									"patching_rect" : [ 215.0, 95.0, 113.0, 47.0 ],
+									"text" : "don't allow values to pass until kdtree is fitted"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"id" : "obj-4",
+									"maxclass" : "newobj",
+									"numinlets" : 1,
+									"numoutlets" : 1,
+									"outlettype" : [ "int" ],
+									"patching_rect" : [ 330.0, 90.0, 22.0, 22.0 ],
+									"text" : "t 1"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"id" : "obj-3",
+									"maxclass" : "newobj",
+									"numinlets" : 2,
+									"numoutlets" : 1,
+									"outlettype" : [ "" ],
+									"patching_rect" : [ 330.0, 120.0, 32.0, 22.0 ],
+									"text" : "gate"
+								}
+
+							}
+, 							{
+								"box" : 								{
 									"comment" : "",
 									"id" : "obj-1",
 									"index" : 1,
 									"maxclass" : "outlet",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 307.5, 372.0, 30.0, 30.0 ]
+									"patching_rect" : [ 306.75, 417.0, 30.0, 30.0 ]
 								}
 
 							}
@@ -2755,7 +2850,7 @@
 									"maxclass" : "comment",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 367.75, 213.5, 150.0, 33.0 ],
+									"patching_rect" : [ 367.0, 243.5, 150.0, 33.0 ],
 									"text" : "store camera position in buffer to use for (knearest)"
 								}
 
@@ -2767,7 +2862,7 @@
 									"maxclass" : "comment",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 65.0, 355.0, 189.0, 47.0 ],
+									"patching_rect" : [ 64.25, 385.0, 189.0, 47.0 ],
 									"text" : "create a 3d kd-tree allowing us to look up the nearest points based on the position of our camera"
 								}
 
@@ -2779,7 +2874,7 @@
 									"numinlets" : 0,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 330.75, 80.0, 81.0, 22.0 ],
+									"patching_rect" : [ 343.0, 47.0, 81.0, 22.0 ],
 									"text" : "r render-bang"
 								}
 
@@ -2791,7 +2886,7 @@
 									"numinlets" : 2,
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
-									"patching_rect" : [ 330.75, 120.0, 68.0, 22.0 ],
+									"patching_rect" : [ 330.0, 150.0, 68.0, 22.0 ],
 									"text" : "zl.reg 0 0 0"
 								}
 
@@ -2802,7 +2897,7 @@
 									"maxclass" : "newobj",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 268.0, 340.0, 107.0, 22.0 ],
+									"patching_rect" : [ 267.25, 385.0, 107.0, 22.0 ],
 									"text" : "s nearestPositions"
 								}
 
@@ -2814,7 +2909,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 2,
 									"outlettype" : [ "bang", "int" ],
-									"patching_rect" : [ 161.5, 144.0, 29.5, 22.0 ],
+									"patching_rect" : [ 160.75, 174.0, 29.5, 22.0 ],
 									"text" : "t b i"
 								}
 
@@ -2826,7 +2921,7 @@
 									"numinlets" : 2,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 200.0, 190.0, 108.0, 22.0 ],
+									"patching_rect" : [ 199.25, 220.0, 108.0, 22.0 ],
 									"text" : "numneighbours $1"
 								}
 
@@ -2838,7 +2933,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 330.75, 150.0, 36.0, 22.0 ],
+									"patching_rect" : [ 330.0, 180.0, 36.0, 22.0 ],
 									"text" : "defer"
 								}
 
@@ -2850,7 +2945,7 @@
 									"numinlets" : 3,
 									"numoutlets" : 3,
 									"outlettype" : [ "", "", "" ],
-									"patching_rect" : [ 268.0, 310.0, 98.0, 22.0 ],
+									"patching_rect" : [ 267.25, 340.0, 98.0, 22.0 ],
 									"text" : "route knearest fit"
 								}
 
@@ -2862,7 +2957,7 @@
 									"numinlets" : 2,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 161.5, 235.0, 101.0, 22.0 ],
+									"patching_rect" : [ 160.75, 265.0, 101.0, 22.0 ],
 									"text" : "knearest xyzCam"
 								}
 
@@ -2874,7 +2969,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 2,
 									"outlettype" : [ "float", "bang" ],
-									"patching_rect" : [ 330.75, 270.0, 154.0, 22.0 ],
+									"patching_rect" : [ 330.0, 300.0, 154.0, 22.0 ],
 									"text" : "buffer~ xyzCam @samps 3"
 								}
 
@@ -2886,7 +2981,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 1,
 									"outlettype" : [ "list" ],
-									"patching_rect" : [ 330.75, 190.0, 192.0, 22.0 ],
+									"patching_rect" : [ 330.0, 220.0, 192.0, 22.0 ],
 									"text" : "fluid.list2buf @destination xyzCam"
 								}
 
@@ -2898,7 +2993,7 @@
 									"numinlets" : 2,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 50.0, 235.0, 91.0, 22.0 ],
+									"patching_rect" : [ 49.25, 265.0, 91.0, 22.0 ],
 									"text" : "fit 3dWorldData"
 								}
 
@@ -2910,7 +3005,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 3,
 									"outlettype" : [ "bang", "float", "" ],
-									"patching_rect" : [ 172.0, 280.0, 115.0, 22.0 ],
+									"patching_rect" : [ 171.25, 310.0, 115.0, 22.0 ],
 									"text" : "fluid.kdtree~ 3dTree"
 								}
 
@@ -2924,7 +3019,7 @@
 									"numinlets" : 0,
 									"numoutlets" : 1,
 									"outlettype" : [ "bang" ],
-									"patching_rect" : [ 50.0, 40.0, 30.0, 30.0 ]
+									"patching_rect" : [ 49.25, 70.0, 30.0, 30.0 ]
 								}
 
 							}
@@ -2937,7 +3032,7 @@
 									"numinlets" : 0,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 161.5, 40.0, 30.0, 30.0 ]
+									"patching_rect" : [ 160.75, 70.0, 30.0, 30.0 ]
 								}
 
 							}
@@ -2950,7 +3045,7 @@
 									"numinlets" : 0,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 349.75, 40.0, 30.0, 30.0 ]
+									"patching_rect" : [ 420.0, 90.0, 30.0, 30.0 ]
 								}
 
 							}
@@ -2985,7 +3080,15 @@
 							}
 , 							{
 								"patchline" : 								{
+									"destination" : [ "obj-69", 0 ],
+									"source" : [ "obj-3", 0 ]
+								}
+
+							}
+, 							{
+								"patchline" : 								{
 									"destination" : [ "obj-1", 0 ],
+									"order" : 1,
 									"source" : [ "obj-300", 1 ]
 								}
 
@@ -2994,6 +3097,15 @@
 								"patchline" : 								{
 									"destination" : [ "obj-321", 0 ],
 									"source" : [ "obj-300", 0 ]
+								}
+
+							}
+, 							{
+								"patchline" : 								{
+									"destination" : [ "obj-4", 0 ],
+									"midpoints" : [ 316.25, 372.0, 539.375, 372.0, 539.375, 79.0, 339.5, 79.0 ],
+									"order" : 0,
+									"source" : [ "obj-300", 1 ]
 								}
 
 							}
@@ -3027,6 +3139,13 @@
 							}
 , 							{
 								"patchline" : 								{
+									"destination" : [ "obj-3", 0 ],
+									"source" : [ "obj-4", 0 ]
+								}
+
+							}
+, 							{
+								"patchline" : 								{
 									"destination" : [ "obj-306", 0 ],
 									"source" : [ "obj-69", 0 ]
 								}
@@ -3034,7 +3153,7 @@
 							}
 , 							{
 								"patchline" : 								{
-									"destination" : [ "obj-69", 0 ],
+									"destination" : [ "obj-3", 1 ],
 									"source" : [ "obj-70", 0 ]
 								}
 
@@ -4065,12 +4184,60 @@
 						"assistshowspatchername" : 0,
 						"boxes" : [ 							{
 								"box" : 								{
+									"id" : "obj-10",
+									"linecount" : 4,
+									"maxclass" : "comment",
+									"numinlets" : 1,
+									"numoutlets" : 0,
+									"patching_rect" : [ 270.0, 97.0, 150.0, 60.0 ],
+									"text" : "join the length of the buffer to all the slicePoints, because the last slice needs to be included"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"id" : "obj-8",
+									"maxclass" : "newobj",
+									"numinlets" : 2,
+									"numoutlets" : 2,
+									"outlettype" : [ "", "" ],
+									"patching_rect" : [ 79.333333333333343, 225.0, 76.0, 22.0 ],
+									"text" : "zl 32767 join"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"id" : "obj-5",
+									"maxclass" : "newobj",
+									"numinlets" : 1,
+									"numoutlets" : 2,
+									"outlettype" : [ "float", "bang" ],
+									"patching_rect" : [ 214.833333333333371, 165.0, 125.0, 22.0 ],
+									"text" : "buffer~ concatSounds"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"id" : "obj-3",
+									"maxclass" : "newobj",
+									"numinlets" : 1,
+									"numoutlets" : 3,
+									"outlettype" : [ "", "", "" ],
+									"patching_rect" : [ 183.833333333333371, 135.0, 81.0, 22.0 ],
+									"text" : "getattr samps"
+								}
+
+							}
+, 							{
+								"box" : 								{
 									"id" : "obj-4",
 									"linecount" : 3,
 									"maxclass" : "comment",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 382.5, 90.0, 180.0, 47.0 ],
+									"patching_rect" : [ 435.0, 97.0, 180.0, 47.0 ],
 									"text" : "We use MFCC (Mel-Frequency Cepstral Coefficents) as spectral descriptors of our slices"
 								}
 
@@ -4083,7 +4250,7 @@
 									"maxclass" : "outlet",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 45.0, 720.0, 30.0, 30.0 ]
+									"patching_rect" : [ 45.0, 825.0, 30.0, 30.0 ]
 								}
 
 							}
@@ -4106,7 +4273,7 @@
 									"maxclass" : "comment",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 240.0, 600.0, 135.0, 47.0 ],
+									"patching_rect" : [ 248.833333333333343, 704.0, 135.0, 47.0 ],
 									"text" : "store data in dataset with incremental number for every slice"
 								}
 
@@ -4117,7 +4284,7 @@
 									"maxclass" : "comment",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 103.299997925758362, 504.0, 236.0, 20.0 ],
+									"patching_rect" : [ 112.133331259091705, 608.0, 236.0, 20.0 ],
 									"text" : "flatten the buffer, putting all channels into 1"
 								}
 
@@ -4128,7 +4295,7 @@
 									"maxclass" : "comment",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 240.0, 234.0, 116.0, 20.0 ],
+									"patching_rect" : [ 248.833333333333343, 338.0, 116.0, 20.0 ],
 									"text" : "length to analyze"
 								}
 
@@ -4139,7 +4306,7 @@
 									"maxclass" : "comment",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 70.5, 234.0, 116.0, 20.0 ],
+									"patching_rect" : [ 79.333333333333343, 338.0, 116.0, 20.0 ],
 									"text" : "startpoint to analyze"
 								}
 
@@ -4151,7 +4318,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 2,
 									"outlettype" : [ "float", "bang" ],
-									"patching_rect" : [ 103.299997925758362, 526.0, 95.0, 22.0 ],
+									"patching_rect" : [ 112.133331259091705, 630.0, 95.0, 22.0 ],
 									"text" : "buffer~ statsFlat"
 								}
 
@@ -4163,7 +4330,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 3,
 									"outlettype" : [ "bang", "float", "" ],
-									"patching_rect" : [ 70.5, 480.0, 320.0, 22.0 ],
+									"patching_rect" : [ 79.333333333333343, 584.0, 320.0, 22.0 ],
 									"text" : "fluid.bufflatten~ @source mfccStats @destination statsFlat"
 								}
 
@@ -4175,7 +4342,7 @@
 									"numinlets" : 2,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 148.5, 600.0, 35.0, 22.0 ],
+									"patching_rect" : [ 157.333333333333343, 704.0, 35.0, 22.0 ],
 									"text" : "clear"
 								}
 
@@ -4187,7 +4354,7 @@
 									"numinlets" : 2,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 199.5, 630.0, 32.0, 22.0 ],
+									"patching_rect" : [ 208.333333333333343, 734.0, 32.0, 22.0 ],
 									"text" : "print"
 								}
 
@@ -4199,7 +4366,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 1,
 									"outlettype" : [ "bang" ],
-									"patching_rect" : [ 148.5, 555.0, 22.0, 22.0 ],
+									"patching_rect" : [ 157.333333333333343, 659.0, 22.0, 22.0 ],
 									"text" : "t b"
 								}
 
@@ -4211,7 +4378,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 3,
 									"outlettype" : [ "bang", "float", "" ],
-									"patching_rect" : [ 70.5, 675.0, 139.0, 22.0 ],
+									"patching_rect" : [ 79.333333333333343, 779.0, 139.0, 22.0 ],
 									"text" : "fluid.dataset~ slicesData"
 								}
 
@@ -4223,7 +4390,7 @@
 									"numinlets" : 2,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 70.5, 630.0, 120.0, 22.0 ],
+									"patching_rect" : [ 79.333333333333343, 734.0, 120.0, 22.0 ],
 									"text" : "addpoint $1 statsFlat"
 								}
 
@@ -4235,7 +4402,7 @@
 									"numinlets" : 5,
 									"numoutlets" : 4,
 									"outlettype" : [ "int", "", "", "int" ],
-									"patching_rect" : [ 70.5, 600.0, 61.0, 22.0 ],
+									"patching_rect" : [ 79.333333333333343, 704.0, 61.0, 22.0 ],
 									"text" : "counter"
 								}
 
@@ -4247,7 +4414,7 @@
 									"numinlets" : 2,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 210.0, 256.0, 85.0, 22.0 ],
+									"patching_rect" : [ 218.833333333333343, 360.0, 85.0, 22.0 ],
 									"text" : "numframes $1"
 								}
 
@@ -4259,7 +4426,7 @@
 									"numinlets" : 2,
 									"numoutlets" : 1,
 									"outlettype" : [ "float" ],
-									"patching_rect" : [ 210.0, 226.0, 29.5, 22.0 ],
+									"patching_rect" : [ 218.833333333333343, 330.0, 29.5, 22.0 ],
 									"text" : "!- 0."
 								}
 
@@ -4271,7 +4438,7 @@
 									"numinlets" : 2,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 70.5, 256.0, 113.0, 22.0 ],
+									"patching_rect" : [ 79.333333333333343, 360.0, 113.0, 22.0 ],
 									"text" : "startframe $1, bang"
 								}
 
@@ -4283,7 +4450,7 @@
 									"maxclass" : "comment",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 180.0, 182.0, 223.299997925758362, 33.0 ],
+									"patching_rect" : [ 188.833333333333343, 286.0, 223.299997925758362, 33.0 ],
 									"text" : "analyze buffer per slice segment pairs (startpoint/endpoint)"
 								}
 
@@ -4295,7 +4462,7 @@
 									"numinlets" : 2,
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
-									"patching_rect" : [ 70.5, 181.0, 104.0, 22.0 ],
+									"patching_rect" : [ 79.333333333333343, 285.0, 104.0, 22.0 ],
 									"text" : "zl 32767 stream 2"
 								}
 
@@ -4307,7 +4474,7 @@
 									"numinlets" : 2,
 									"numoutlets" : 1,
 									"outlettype" : [ "list" ],
-									"patching_rect" : [ 70.5, 135.0, 221.0, 22.0 ],
+									"patching_rect" : [ 79.333333333333343, 195.0, 221.0, 22.0 ],
 									"text" : "fluid.buf2list 32767 @source slicePoints"
 								}
 
@@ -4318,7 +4485,7 @@
 									"maxclass" : "comment",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 103.299997925758362, 414.0, 437.0, 20.0 ],
+									"patching_rect" : [ 112.133331259091705, 518.0, 437.0, 20.0 ],
 									"text" : "get some statistics from the values, like mean, standard deviation, maximum etc."
 								}
 
@@ -4330,7 +4497,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 2,
 									"outlettype" : [ "float", "bang" ],
-									"patching_rect" : [ 103.299997925758362, 437.0, 102.0, 22.0 ],
+									"patching_rect" : [ 112.133331259091705, 541.0, 102.0, 22.0 ],
 									"text" : "buffer~ mfccStats"
 								}
 
@@ -4342,7 +4509,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 3,
 									"outlettype" : [ "bang", "float", "" ],
-									"patching_rect" : [ 70.5, 390.0, 278.0, 22.0 ],
+									"patching_rect" : [ 79.333333333333343, 494.0, 278.0, 22.0 ],
 									"text" : "fluid.bufstats~ @source mfccBuf @stats mfccStats"
 								}
 
@@ -4354,7 +4521,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 3,
 									"outlettype" : [ "bang", "float", "" ],
-									"patching_rect" : [ 70.5, 300.0, 492.0, 22.0 ],
+									"patching_rect" : [ 79.333333333333343, 404.0, 492.0, 22.0 ],
 									"text" : "fluid.bufmfcc~ 13 @source concatSounds @features mfccBuf @startcoeff 1 @numchans 1"
 								}
 
@@ -4366,7 +4533,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 2,
 									"outlettype" : [ "float", "bang" ],
-									"patching_rect" : [ 103.299997925758362, 345.0, 93.0, 22.0 ],
+									"patching_rect" : [ 112.133331259091705, 449.0, 93.0, 22.0 ],
 									"text" : "buffer~ mfccBuf"
 								}
 
@@ -4377,7 +4544,7 @@
 									"maxclass" : "comment",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 103.299997925758362, 324.5, 363.0, 20.0 ],
+									"patching_rect" : [ 112.133331259091705, 428.5, 363.0, 20.0 ],
 									"text" : "get the mfcc of the slices, only Left channel, store result in mfccBuf"
 								}
 
@@ -4405,6 +4572,14 @@
 							}
 , 							{
 								"patchline" : 								{
+									"destination" : [ "obj-3", 0 ],
+									"order" : 0,
+									"source" : [ "obj-1", 3 ]
+								}
+
+							}
+, 							{
+								"patchline" : 								{
 									"destination" : [ "obj-38", 0 ],
 									"source" : [ "obj-1", 1 ]
 								}
@@ -4420,6 +4595,7 @@
 , 							{
 								"patchline" : 								{
 									"destination" : [ "obj-93", 0 ],
+									"order" : 1,
 									"source" : [ "obj-1", 3 ]
 								}
 
@@ -4447,6 +4623,20 @@
 							}
 , 							{
 								"patchline" : 								{
+									"destination" : [ "obj-5", 0 ],
+									"source" : [ "obj-3", 1 ]
+								}
+
+							}
+, 							{
+								"patchline" : 								{
+									"destination" : [ "obj-8", 1 ],
+									"source" : [ "obj-3", 0 ]
+								}
+
+							}
+, 							{
+								"patchline" : 								{
 									"destination" : [ "obj-70", 0 ],
 									"source" : [ "obj-338", 0 ]
 								}
@@ -4454,7 +4644,7 @@
 							}
 , 							{
 								"patchline" : 								{
-									"destination" : [ "obj-54", 0 ],
+									"destination" : [ "obj-8", 0 ],
 									"source" : [ "obj-38", 0 ]
 								}
 
@@ -4519,6 +4709,13 @@
 							}
 , 							{
 								"patchline" : 								{
+									"destination" : [ "obj-54", 0 ],
+									"source" : [ "obj-8", 0 ]
+								}
+
+							}
+, 							{
+								"patchline" : 								{
 									"destination" : [ "obj-116", 0 ],
 									"order" : 0,
 									"source" : [ "obj-93", 0 ]
@@ -4552,18 +4749,6 @@
 					}
 ,
 					"text" : "p analyzeMFCCtoDataSet"
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"id" : "obj-40",
-					"maxclass" : "newobj",
-					"numinlets" : 2,
-					"numoutlets" : 1,
-					"outlettype" : [ "int" ],
-					"patching_rect" : [ 45.0, 600.0, 29.5, 22.0 ],
-					"text" : "- 1"
 				}
 
 			}
@@ -4616,10 +4801,11 @@
 , 			{
 				"box" : 				{
 					"id" : "obj-20",
+					"linecount" : 3,
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 203.0, 602.0, 198.0, 20.0 ],
+					"patching_rect" : [ 254.0, 557.0, 120.0, 47.0 ],
 					"text" : "stored slice startpoints in samples"
 				}
 
@@ -4642,7 +4828,7 @@
 					"maxclass" : "newobj",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 142.0, 557.0, 59.0, 22.0 ],
+					"patching_rect" : [ 45.0, 557.0, 59.0, 22.0 ],
 					"text" : "s analyze"
 				}
 
@@ -4654,19 +4840,8 @@
 					"numinlets" : 1,
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
-					"patching_rect" : [ 45.0, 557.0, 81.0, 22.0 ],
+					"patching_rect" : [ 114.0, 557.0, 81.0, 22.0 ],
 					"text" : "getattr samps"
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"id" : "obj-189",
-					"maxclass" : "newobj",
-					"numinlets" : 1,
-					"numoutlets" : 0,
-					"patching_rect" : [ 45.0, 659.0, 71.0, 22.0 ],
-					"text" : "s numslices"
 				}
 
 			}
@@ -4676,7 +4851,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 94.0, 630.0, 134.0, 20.0 ],
+					"patching_rect" : [ 171.0, 616.0, 134.0, 20.0 ],
 					"text" : "amount of slices made"
 				}
 
@@ -4726,7 +4901,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "float", "bang" ],
-					"patching_rect" : [ 94.0, 600.0, 107.0, 22.0 ],
+					"patching_rect" : [ 145.0, 585.0, 107.0, 22.0 ],
 					"text" : "buffer~ slicePoints"
 				}
 
@@ -4764,7 +4939,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "bang" ],
 					"parameter_enable" : 0,
-					"patching_rect" : [ 45.0, 630.0, 50.0, 22.0 ]
+					"patching_rect" : [ 114.0, 615.0, 50.0, 22.0 ]
 				}
 
 			}
@@ -6095,6 +6270,13 @@
 			}
 , 			{
 				"patchline" : 				{
+					"destination" : [ "obj-48", 0 ],
+					"source" : [ "obj-13", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
 					"destination" : [ "obj-138", 0 ],
 					"source" : [ "obj-130", 0 ]
 				}
@@ -6133,7 +6315,7 @@
 , 			{
 				"patchline" : 				{
 					"destination" : [ "obj-193", 0 ],
-					"order" : 1,
+					"order" : 0,
 					"source" : [ "obj-15", 0 ]
 				}
 
@@ -6148,7 +6330,7 @@
 , 			{
 				"patchline" : 				{
 					"destination" : [ "obj-86", 0 ],
-					"order" : 0,
+					"order" : 1,
 					"source" : [ "obj-15", 0 ]
 				}
 
@@ -6183,15 +6365,15 @@
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-16", 0 ],
-					"source" : [ "obj-193", 1 ]
+					"destination" : [ "obj-13", 0 ],
+					"source" : [ "obj-193", 0 ]
 				}
 
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-40", 0 ],
-					"source" : [ "obj-193", 0 ]
+					"destination" : [ "obj-16", 0 ],
+					"source" : [ "obj-193", 1 ]
 				}
 
 			}
@@ -6288,22 +6470,8 @@
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-48", 0 ],
-					"source" : [ "obj-40", 0 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
 					"destination" : [ "obj-59", 0 ],
 					"source" : [ "obj-42", 0 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
-					"destination" : [ "obj-189", 0 ],
-					"source" : [ "obj-48", 0 ]
 				}
 
 			}
@@ -6319,6 +6487,20 @@
 				"patchline" : 				{
 					"destination" : [ "obj-67", 0 ],
 					"source" : [ "obj-59", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-11", 0 ],
+					"source" : [ "obj-6", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-9", 0 ],
+					"source" : [ "obj-6", 1 ]
 				}
 
 			}
